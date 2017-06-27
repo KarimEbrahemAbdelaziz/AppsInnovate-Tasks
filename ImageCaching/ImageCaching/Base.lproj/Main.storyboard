@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lBO-vv-zHo">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="kmG-61-3e5">
+            <objects>
+                <viewController id="lBO-vv-zHo" customClass="ViewController" customModule="ImageCaching" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NEI-sf-Vro"/>
+                        <viewControllerLayoutGuide type="bottom" id="t4c-dV-QZ9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iNR-nY-BYR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="239" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KVu-rw-g01">
+                                <rect key="frame" x="0.0" y="28" width="375" height="639"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="imageCell" rowHeight="239" id="cMB-d2-hcN">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="239"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cMB-d2-hcN" id="Xed-rB-ZE0">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="239"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tNA-3v-dQs">
+                                                    <rect key="frame" x="16" y="16" width="343" height="206.5"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="tNA-3v-dQs" secondAttribute="bottom" constant="8" id="AnK-8D-WMG"/>
+                                                <constraint firstItem="tNA-3v-dQs" firstAttribute="leading" secondItem="Xed-rB-ZE0" secondAttribute="leadingMargin" constant="8" id="OTS-Lt-qIR"/>
+                                                <constraint firstItem="tNA-3v-dQs" firstAttribute="top" secondItem="Xed-rB-ZE0" secondAttribute="topMargin" constant="8" id="g55-Vp-rtg"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="tNA-3v-dQs" secondAttribute="trailing" constant="8" id="kDQ-v0-khN"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KVu-rw-g01" firstAttribute="leading" secondItem="iNR-nY-BYR" secondAttribute="leading" id="Cct-iS-fk9"/>
+                            <constraint firstAttribute="trailing" secondItem="KVu-rw-g01" secondAttribute="trailing" id="a4l-8U-3aa"/>
+                            <constraint firstItem="t4c-dV-QZ9" firstAttribute="top" secondItem="KVu-rw-g01" secondAttribute="bottom" id="ktE-da-psX"/>
+                            <constraint firstItem="KVu-rw-g01" firstAttribute="top" secondItem="NEI-sf-Vro" secondAttribute="bottom" constant="8" id="shO-5W-PNR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imagesTabelView" destination="KVu-rw-g01" id="O6e-jQ-3A4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EI9-UI-mJ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="396" y="119"/>
+        </scene>
+    </scenes>
+</document>

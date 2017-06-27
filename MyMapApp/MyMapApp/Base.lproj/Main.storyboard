@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyMapApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hRm-UR-mib">
+                                <rect key="frame" x="0.0" y="20" width="375" height="567"/>
+                            </mapView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="g8E-sv-2ST">
+                                <rect key="frame" x="0.0" y="587" width="375" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRP-5F-4Ak">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                                        <state key="normal" title="Get My Location"/>
+                                        <connections>
+                                            <action selector="getMyLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bnp-sO-a8q"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v90-Oa-99j">
+                                        <rect key="frame" x="0.0" y="40" width="375" height="40"/>
+                                        <state key="normal" title="Generate New Location"/>
+                                        <connections>
+                                            <action selector="generateNewLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jOg-ee-HeH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="v90-Oa-99j" secondAttribute="trailing" id="3yg-fq-MKh"/>
+                                    <constraint firstItem="wRP-5F-4Ak" firstAttribute="leading" secondItem="g8E-sv-2ST" secondAttribute="leading" id="B5r-RP-uao"/>
+                                    <constraint firstItem="wRP-5F-4Ak" firstAttribute="top" secondItem="g8E-sv-2ST" secondAttribute="top" id="T1R-3V-ivx"/>
+                                    <constraint firstItem="v90-Oa-99j" firstAttribute="leading" secondItem="g8E-sv-2ST" secondAttribute="leading" id="c7H-7O-b6Q"/>
+                                    <constraint firstAttribute="trailing" secondItem="wRP-5F-4Ak" secondAttribute="trailing" id="chD-8g-DUk"/>
+                                    <constraint firstItem="v90-Oa-99j" firstAttribute="top" secondItem="wRP-5F-4Ak" secondAttribute="bottom" id="iI9-js-Wk0"/>
+                                    <constraint firstAttribute="height" constant="80" id="reA-Kc-k20"/>
+                                    <constraint firstAttribute="bottom" secondItem="v90-Oa-99j" secondAttribute="bottom" id="vY6-9d-PIK"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="g8E-sv-2ST" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0Pk-zj-TgD"/>
+                            <constraint firstItem="hRm-UR-mib" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="5qb-fW-Ptp"/>
+                            <constraint firstAttribute="trailing" secondItem="hRm-UR-mib" secondAttribute="trailing" id="Hdc-r4-bEH"/>
+                            <constraint firstItem="g8E-sv-2ST" firstAttribute="top" secondItem="hRm-UR-mib" secondAttribute="bottom" id="OuP-AE-cYg"/>
+                            <constraint firstItem="hRm-UR-mib" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="QVv-l2-ioA"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="g8E-sv-2ST" secondAttribute="bottom" id="TjS-w4-ZaS"/>
+                            <constraint firstAttribute="trailing" secondItem="g8E-sv-2ST" secondAttribute="trailing" id="be0-9c-Glj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myMapView" destination="hRm-UR-mib" id="fzc-dx-Pcb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+</document>
